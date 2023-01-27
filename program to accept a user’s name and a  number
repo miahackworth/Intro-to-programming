@@ -1,0 +1,18 @@
+#Write a program to accept a user’s name and a  number
+username = input("What is your name, good person? \n")
+print("Username is: " + username)
+
+usernumber = int(input("Please enter a number between 0 and 100 \n"))
+print("User number is: " + str(usernumber))
+
+if usernumber > 10:
+    print("You win " + username)
+    
+elif usernumber <= 10:
+    print("You lose " + username)
+    
+#Else statement check input validation
+else:
+    print("Something went wrong")
+
+
