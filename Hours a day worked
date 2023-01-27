@@ -1,0 +1,24 @@
+#The user will enter the hours a day worked
+
+BEGIN
+NUMBERS user_hours, DAYS_IN_WORK_WEEK, DAYS_IN_WORK_YEAR
+
+user_hours = INPUT"Enter total number of hours worked today: "
+
+user_hours = INPUT "Enter total number of hours worked today: "
+
+user_hours = INPUT "Enter total number of hours worked today: "
+
+user_hours = INPUT "Enter total number of hours worked today: "
+
+user_hours = INPUT "Enter total number of hours worked today: "
+
+DAYS_IN_WORK_WEEK = 5
+DAYS_IN_WORK_YEAR = 252
+
+#The number of hours enter will be the same for all days of the week
+
+print(user_hours times DAYS_IN_WORK_WEEK,"Total number of hours in work week.")
+
+print(user_hours times DAYS_IN_WORK_YEAR,"Total number of hours in work year.")
+END
