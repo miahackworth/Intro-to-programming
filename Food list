@@ -1,0 +1,34 @@
+#Mia Hackworth
+#2/13/23
+#A program with two functions:
+def addToList(food):  
+#Ask the user to input another food item.
+    user_input = str(input("Please enter another food item \n"))
+    food.append(user_input)
+def printList(food): 
+#Print the entire list
+    print(food)
+
+def removefromList(food):
+    #Ask the user to remove another food item
+    user_input = str(input("Please remove another food item \n"))
+    food.remove(user_input)
+ 
+#The main program will create a list:  myList = ["apple", "orange", "grapes]
+myList = ["apple", "orange", "grapes"]
+
+#Call the function printList, using myList
+printList(myList)
+
+#Call the function addToList, using myList
+addToList(myList)
+
+#Call the function printList, using myList
+printList(myList)
+
+#Add another fucntion that asks for the user for a food to remoce. Remove the food 
+#Remove item
+removefromList(myList)
+
+#print list
+printList(myList)
