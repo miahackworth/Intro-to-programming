@@ -1,0 +1,70 @@
+#Mia Hackworth
+#2/26/2023
+#Midterm - Hollywood Movie Rating Guide
+
+#Mia Hackworth
+#2/21/2023
+#Midterm - Hollywood Movie Rating Guide
+
+#Average function
+
+def Average(movie_rating):
+    return sum(movie_rating) / (len(movie_rating)-1)
+
+
+x = 0
+
+movies_list = ['Falut in Our Stars', 'Titianic', 'The Menu', 'Soul Surfer']
+
+movies = []
+
+for i in movies_list:
+
+    movies_list = ['Falut in Our Stars', 'Titianic', 'The Menu', 'Soul Surfer']
+
+    movies = []
+
+    print("Please select a movie from our movie rating list: ")
+
+    for i in movies_list:
+        movies.append(i)
+    movies_dict = {}
+    for index, word in enumerate(movies, start = 1):
+        movies_dict[index] = word
+    print(movies_dict)
+    user = int(input('Choose from options: '))
+    print(movies_dict.get(user))
+
+    
+
+
+
+    movie_rating = [x]
+
+
+    for y in range(3): 
+
+        y = int(input("Please enter a movie rating between 0 and 4 \n"))
+
+        if y >= 0 and y <= 4:
+            print("Thank you for your rating!")
+            break
+        else: 
+            print("You must enter a rating 0 and 4, try again")
+
+
+    movie_rating.insert(x,y)
+
+    userentry = 7
+    average = Average(movie_rating)
+    while userentry >= 0:
+            userentry = int(input("Do you or another user want to enter a rating for a movie?\nPlease enter a number 7 to continue or enter a negative number to quit. \n"))
+            if (userentry <= 0):
+                average = Average(movie_rating)
+                print("The average of the movie ratings for",movies_dict.get(user), average)
+                userentry = False
+                quit()
+            elif (userentry == 7):
+                break
+            else:
+                print("Invalid Input")
