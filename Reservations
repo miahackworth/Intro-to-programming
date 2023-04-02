@@ -1,0 +1,71 @@
+#Mia Hackworth
+#2/27/2023
+
+#A program that accepts a last name and a reservation time.  Store the information in separate lists.
+
+#The valid reservation times are:  6, 7, 8.
+#Allow input until the user wants to stop.
+#Print the following:
+#Each diner along with their reservation time.
+#The total number of diners who will be dining at 6, at 7, and at 8.
+
+def reservation():
+
+    sixoclock = []
+    sevenoclock = []
+    eightoclock = []
+
+    name = ''
+    time = 0
+    totalreservations = 0
+
+    sixtime = 0
+    seventime = 0
+    eighttime = 0
+
+    continueinput = 'Y'
+
+    while continueinput.upper() == "Y":
+        time = str(input('Please enter a time to make a reservation: 6, 7, or 8. \n'))
+        
+        if time == '6' and sixtime <= 10:
+            name = str(input('Please enter a name for the reservation. \n'))
+            sixoclock.append(name)
+            
+            print("Reservation Completed for", name)
+            totalreservations = totalreservations + 1
+            sixtime = sixtime + 1
+        
+        elif time == '7' and seventime <= 10:
+            name = str(input('Please enter a name for the reservation. \n'))
+            sevenoclock.append(name)
+            
+            print("Reservation Completed for", name)
+            totalreservations = totalreservations + 1
+            seventime = 1 + seventime
+        
+        elif time == '8' and eighttime <= 10:
+            name = str(input('Please enter a name for the reservation. \n'))
+            eightoclock.append(name)
+            
+            print("Reservation Completed for", name)
+            totalreservations = totalreservations + 1
+            eighttime = 1 + eighttime
+        else:
+            print("Please enter proper time. \n")
+        continueinput = input("Do you want to continue?, enter Y or N. \n")
+
+    print("The reservations made at 6:00 PM were for", sixoclock)
+    print("The reservations made at 7:00 PM were for", sevenoclock)
+    print("The reservations made at 8:00 PM were for", eightoclock)
+    print("The total number of reservations for the night is:", totalreservations)
+
+    reservationlist = sixoclock + sevenoclock + eightoclock
+    return reservationlist
+
+def main():
+    reservations = []
+    reservations = reservation()
+    print(reservations)
+
+main()
