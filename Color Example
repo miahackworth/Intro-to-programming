@@ -1,0 +1,40 @@
+#Mia Hackworth
+#2/6/23
+#Color Example
+
+#Red and Blue -- Purple
+#Red and Yellow - Orange
+#Blue and Yellow - Green 
+
+#User Input
+color1 = input("Please enter a primary color Red, Blue, or Yellow: \n")
+color2 = input("Please enter a secondary color Red, Blue, or Yellow: \n")
+
+#Input Validation
+def color_validation(color1, color2):
+    if ((color1.capitalize() == 'Red' or color1.capitalize() == 'Blue' or color1.capitalize() == 'Yellow') and 
+        (color2.capitalize() == 'Red' or color2.capitalize() == 'Blue' or color2.capitalize() == 'Yellow')):
+        print("Colors are valid")
+    else:
+        print("User did not enter a primary color, please restart the program.")
+#Call color vlaidation method
+color_validation(color1, color2)
+
+#Color Mixture Results
+if ((color1.capitalize() == 'Red' or color2.capitalize() == 'Red') and
+(color1.capitalize() == 'Blue' or color2.capitalize() == 'Blue')):
+    print("The mixture is purple.")
+
+elif ((color1.capitalize() == 'Red' or color2.capitalize() == 'Red') and
+(color1.capitalize() == 'Yellow' or color2.capitalize() == 'Yellow')):
+    print("The mixture is orange.")
+
+elif ((color1.capitalize() == 'Blue' or color2.capitalize() == 'Blue') and
+(color1.capitalize() == 'Yellow' or color2.capitalize() == 'Yellow')):
+    print("The mixture is green.")
+    
+else:
+    print("Error something went wrong.")
+
+
+
