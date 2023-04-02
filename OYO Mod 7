@@ -1,0 +1,44 @@
+#Mia Hackworth
+#3/1/2023
+
+def userentry():
+    user = 'Y'
+    numberlist = []
+    while user.upper() == 'Y':
+        listitem = int(input("Please enter as many number at you wish, one by one. \n"))
+        numberlist.append(listitem)
+        user = str(input("Would you like to add another number? Enter 'y' or 'Y' to continue.\n"))
+    return numberlist
+
+def negativelist(completedlist):
+    negativeSum = 0
+    for x in completedlist:
+        if x < 0:
+            negativeSum = negativeSum + x
+    return negativeSum
+#Write a function that will add all the positive numbers in the list and return the result   
+def positivelist(completedlist):
+    positiveSum = 0
+    for x in completedlist:
+        if x > 0:
+            positiveSum = positiveSum + x
+    return positiveSum
+def sumofList(completedlist):
+    totalSum = 0
+    for x in completedlist:
+        totalSum = totalSum + x
+    return totalSum
+def main():
+    #Write a loop that will let a user enter as many numbers as they wish.
+    completedlist = userentry()
+    #Call the three functions
+    negative = negativelist(completedlist)
+    positive = positivelist(completedlist)
+    total = sumofList(completedlist)
+    #Print the results
+    print("Total sum of all negative numbers is: ", negative)
+    print("Total sum of all positive numbers is: ", positive)
+    print("The total sum of all numbers: ",total)
+    #Print the list
+    print("The lis of inputs is: \n", completedlist)
+main()
