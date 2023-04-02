@@ -1,0 +1,41 @@
+#Mia Hackworth
+#1/30/23
+#Assigning the value 20 to the variable y and assign the value 40 to the variable z if the variable x is greater than 100.
+
+x = int(input("Please enter a valuse for x. \n"))
+if x > 100:
+    y = 20
+    z = 40
+    print("Y is 20 and Z is 40")
+else:
+    print("X is less than 100")
+    
+#Assigning the value 0 to the variable b and assign the value 1 to the variable c if the variable a is less than 10.
+a = int(input("Please enter a value for a. \n"))   
+if a < 10:
+    b = 0
+    c = 1
+    print("A is less than 10")
+else:
+    print("A is greater than 10")
+#Displaying "Speed is Normal" if the variable speed is between 55 and 70.  Otherwise, display "Not Going the Speed Limit"
+
+speed = int(input("Please enter the speed in MPH: \n"))
+if speed >= 55 and speed <= 70:
+    print("Speed is normal")
+else:
+    print("Not going the speed limit")
+
+#If amount1 is greater than 10 and amount2 is less than 100, display the greater one.
+    
+amount1 = int(input("Please enter a value for amount 1: \n"))
+amount2 = int(input("Please enter a value for amount 2: \n"))
+
+if amount1 > 10 and amount2 < 100:
+    if amount1 < amount2:
+        print(amount2)
+    elif amount2 < amount1:
+        print("Something went wrong.")
+else:
+    print("The values are outside of the range.")
+            
