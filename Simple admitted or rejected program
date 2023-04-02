@@ -1,0 +1,23 @@
+#Mia Hackworth
+#1/30/23
+#A program that determines if a student will be admitted or rejected.  
+#Student will enter a test score and a class ranK.
+
+testScore = int(input("Please enter a test score \n"))
+
+classRank = int(input("Please enter a class rank, ranging from 0 to 100 \n"))
+
+#Conditions for Acceptance:  testScore >= 90   and classRank >=25
+
+if testScore >= 90 and classRank >= 25:
+    print("You've been accepted!")
+
+#Conditions for Acceptance: testScore >=80 and Class rank >=50
+
+elif testScore >= 80 and classRank >= 50:
+    print("You are still accecpted!")
+
+#Everything else is Reject
+
+else:
+    print("You've been rejected, its okay")
